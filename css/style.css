@@ -1,0 +1,132 @@
+@import url('https://fonts.cdnfonts.com/css/new-super-mario-font-u');
+                                                
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'New Super Mario Font U', sans-serif;
+                                                
+}
+#score {
+    font-family: 'New Super Mario Font U', sans-serif;
+    margin: 10px;
+    z-index: 3;
+  }
+  #bestScore {
+    font-family: 'New Super Mario Font U', sans-serif;
+    margin: 10px;
+    z-index: 3;
+  }
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: cloud-animation 20s infinite linear;
+}
+
+.game-over-lg{
+    position: absolute;
+    display: none;
+}
+
+.button {
+    position: fixed;
+    width: 150px; /* Largura fixa para evitar redimensionamento */
+    padding: 30px;
+    bottom: 55%; /* Distância fixa do fundo */
+    left: 500px; /* Distância fixa do lado esquerdo */
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    cursor: pointer;
+}
+
+
+
+.button:active {
+  box-shadow: inset -4px 4px 0 #222;
+  font-size: 1.5rem;
+}
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+
+@keyframes jump {
+    
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
+
+@keyframes cloud-animation {
+    from {
+        right: -550px
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+.creditos{
+    position: fixed;
+    font-size: 2rem;
+    width: 100%;
+    left: 30px;
+    padding: 100px;
+}
